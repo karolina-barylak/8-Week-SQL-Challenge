@@ -13,22 +13,21 @@ Szczegółowe informacje dotyczące tego studium przypadku znajdują się [tutaj
 
 ## 📋 Spis treści
 
-- [Opis](#opis)
-- [Diagram relacji](#diagram-relacji)
-- [Rozwiązanie: A. Customer Journey](#a-customer-journey)
-- [Rozwiązanie: B. Data Analysis Questions](#b-data-analysis-questions)
-    - [1. How many customers has Foodie-Fi ever had?](#1-how-many-customers-has-foodie-fi-ever-had)
-    - [2. What is the monthly distribution of trial plan start_date values for our dataset - use the start of the month as the group by value](#2-what-is-the-monthly-distribution-of-trial-plan-start_date-values-for-our-dataset---use-the-start-of-the-month-as-the-group-by-value)
-    - [3. What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name](#3-what-plan-start_date-values-occur-after-the-year-2020-for-our-dataset-show-the-breakdown-by-count-of-events-for-each-plan_name)
-    - [4. What is the customer count and percentage of customers who have churned rounded to 1 decimal place?](#4-what-is-the-customer-count-and-percentage-of-customers-who-have-churned-rounded-to-1-decimal-place)
-    - [5. How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?](#5-how-many-customers-have-churned-straight-after-their-initial-free-trial---what-percentage-is-this-rounded-to-the-nearest-whole-number)
-    - [6. What is the number and percentage of customer plans after their initial free trial?](#6-what-is-the-number-and-percentage-of-customer-plans-after-their-initial-free-trial)
-    - [7. What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?](#7-what-is-the-customer-count-and-percentage-breakdown-of-all-5-plan_name-values-at-2020-12-31)
-    - [8. How many customers have upgraded to an annual plan in 2020?](#8-how-many-customers-have-upgraded-to-an-annual-plan-in-2020)
-    - [9. How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?](#9-how-many-days-on-average-does-it-take-for-a-customer-to-an-annual-plan-from-the-day-they-join-foodie-fi)
-    - [10. Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)](#10-can-you-further-breakdown-this-average-value-into-30-day-periods-ie-0-30-days-31-60-days-etc)
-    - [11. How many customers downgraded from a pro monthly to a basic monthly plan in 2020?](#11-how-many-customers-downgraded-from-a-pro-monthly-to-a-basic-monthly-plan-in-2020)
-- [Rozwiązanie: C. Challenge Payment Question](#c-challenge-payment-question)
+- [Opis](#-opis)
+- [Diagram relacji](#-diagram-relacji)
+- [Rozwiązanie: A. Customer Journey](#️-a-customer-journey)
+- [Rozwiązanie: B. Data Analysis Questions](#️-b-data-analysis-questions)
+  - [1. How many customers has Foodie-Fi ever had?](#1-how-many-customers-has-foodie-fi-ever-had)
+  - [2. What is the monthly distribution of trial plan start_date values for our dataset - use the start of the month as the group by value](#2-what-is-the-monthly-distribution-of-trial-plan-start_date-values-for-our-dataset---use-the-start-of-the-month-as-the-group-by-value)
+  - [3. What plan start_date values occur after the year 2020 for our dataset? Show the breakdown by count of events for each plan_name](#3-what-plan-start_date-values-occur-after-the-year-2020-for-our-dataset-show-the-breakdown-by-count-of-events-for-each-plan_name)
+  - [4. What is the customer count and percentage of customers who have churned rounded to 1 decimal place?](#4-what-is-the-customer-count-and-percentage-of-customers-who-have-churned-rounded-to-1-decimal-place)
+  - [5. How many customers have churned straight after their initial free trial - what percentage is this rounded to the nearest whole number?](#5-how-many-customers-have-churned-straight-after-their-initial-free-trial---what-percentage-is-this-rounded-to-the-nearest-whole-number)
+  - [6. What is the number and percentage of customer plans after their initial free trial?](#6-what-is-the-number-and-percentage-of-customer-plans-after-their-initial-free-trial)
+  - [7. What is the customer count and percentage breakdown of all 5 plan_name values at 2020-12-31?](#7-what-is-the-customer-count-and-percentage-breakdown-of-all-5-plan_name-values-at-2020-12-31)
+  - [8. How many customers have upgraded to an annual plan in 2020?](#8-how-many-customers-have-upgraded-to-an-annual-plan-in-2020)
+  - [9. How many days on average does it take for a customer to an annual plan from the day they join Foodie-Fi?](#9-how-many-days-on-average-does-it-take-for-a-customer-to-an-annual-plan-from-the-day-they-join-foodie-fi)
+  - [10. Can you further breakdown this average value into 30 day periods (i.e. 0-30 days, 31-60 days etc)](#10-can-you-further-breakdown-this-average-value-into-30-day-periods-ie-0-30-days-31-60-days-etc)
+  - [11. How many customers downgraded from a pro monthly to a basic monthly plan in 2020?](#11-how-many-customers-downgraded-from-a-pro-monthly-to-a-basic-monthly-plan-in-2020)
 
 ## 🔍 Opis
 
@@ -70,7 +69,7 @@ Tabela 2: subscriptions
 Powyżej przykładowe dane z tabeli `subscriptions`.
 </br>
 
-## A. Customer Journey
+## ⚙️ A. Customer Journey
 
 Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey.
 
@@ -136,7 +135,7 @@ Powyższy kod jest uniwersalny i za każdym razem wygeneruje innych 8-u klientó
 
 </br>
 
-## B. Data Analysis Questions
+## ⚙️ B. Data Analysis Questions
 
 ### 1. How many customers has Foodie-Fi ever had?
 
@@ -434,7 +433,7 @@ WHERE plan_id = 3
 ),
 intervals as(
 -- podział na miesięczne przedziały
-    SELECT 
+    SELECT
         annual_date - trial_date as diff,
         WIDTH_BUCKET(annual_date - trial_date, 0, 360, 12) as avg_days_in_periods
     FROM trial_date_cte
@@ -442,7 +441,7 @@ intervals as(
         ON trial_date_cte.customer_id = annual_date_cte.customer_id
 )
 
-SELECT 
+SELECT
     CONCAT((avg_days_in_periods - 1) * 30, ' - ', avg_days_in_periods * 30, ' days') as  period,
     COUNT(*) AS total_customers,
     ROUND(AVG(diff), 2) as avg_days_to_upgrade
@@ -452,24 +451,27 @@ ORDER BY avg_days_in_periods;
 ```
 
 #### Proces:
+
 Do podziału daty na przedziały 30-dniowe została użyta funkcja WIDTH_BUCKET(), do której podaje się parametry najmniejszej, największej wartości i liczba podziałów.
 W głównym zapytaniu za pomocą funkcji CONCAT() połączono przedziały na łańcuch znaków.
 
 #### Wynik zapytania/Odpowiedź:
-|      period      | total_customers | avg_days_to_up... |
-| :--------------: | :-------------: | :---------------: |
-|   0 - 30 days    |       48        |       9.54        |
-|   30 - 60 days   |       25        |       41.84       |
-|   60 - 90 days   |       33        |       70.88       |
-|  90 - 120 days   |       35        |       99.83       |
-|  120 - 150 days  |       43        |      133.05       |
-|  150 - 180 days  |       35        |      161.54       |
-|  180 - 210 days  |       27        |      190.33       |
-|  210 - 240 days  |        4        |      224.25       |
-|  240 - 270 days  |        5        |      257.20       |
-|  270 - 300 days  |        1        |      285.00       |
-|  300 - 330 days  |        1        |      327.00       |
-|  330 - 360 days  |        1        |      346.00       |
+
+|     period     | total_customers | avg_days_to_up... |
+| :------------: | :-------------: | :---------------: |
+|  0 - 30 days   |       48        |       9.54        |
+|  30 - 60 days  |       25        |       41.84       |
+|  60 - 90 days  |       33        |       70.88       |
+| 90 - 120 days  |       35        |       99.83       |
+| 120 - 150 days |       43        |      133.05       |
+| 150 - 180 days |       35        |      161.54       |
+| 180 - 210 days |       27        |      190.33       |
+| 210 - 240 days |        4        |      224.25       |
+| 240 - 270 days |        5        |      257.20       |
+| 270 - 300 days |        1        |      285.00       |
+| 300 - 330 days |        1        |      327.00       |
+| 330 - 360 days |        1        |      346.00       |
+
 ---
 
 ### 11. How many customers downgraded from a pro monthly to a basic monthly plan in 2020?
@@ -481,7 +483,7 @@ WITH next_plans_cte AS (
   SELECT
     customer_id,
     plan_id,
-    LEAD(plan_id) OVER 
+    LEAD(plan_id) OVER
     (PARTITION BY customer_id
       ORDER BY start_date) as next_plan
   FROM subscriptions
@@ -495,14 +497,14 @@ WHERE plan_id = 2 AND next_plan = 1;
 ```
 
 #### Wynik zapytania/Odpowiedź:
+
 | downgraded_customer |
 | :-----------------: |
 |          0          |
 
 #### Wytłumaczenie:
+
 Problem z tym zapytaniem polega na tym, że w przykładowych danych podanych w zadaniu nie ma klienta, który przeszedłby na gorszy plan, dlatego aby sprawdzić poprawność dodałam wiersz, w którym klient o ID = 7 przechodzi z planu pro na basic.
-
-
 
 ```sql
 INSERT INTO subscriptions(
@@ -512,12 +514,14 @@ VALUES
     ('7', '1', '2020-11-01')
 
 ```
+
 | downgraded_customer |
 | :-----------------: |
 |          1          |
 
 ---
 
+<!--
 ## C. Challenge Payment Question
 
 The Foodie-Fi team wants you to create a new payments table for the year 2020 that includes amounts paid by each customer in the subscriptions table with the following requirements:
@@ -534,37 +538,4 @@ The Foodie-Fi team wants you to create a new payments table for the year 2020 th
 _- płatności miesięczne zawsze następują w tym samym dniu miesiąca, co pierwotna data rozpoczęcia każdego miesięcznego planu płatnego_</br>
 _- zmiany z planu podstawowego na miesięczny lub profesjonalny są pomniejszane o kwotę aktualnie zapłaconą w danym miesiącu i rozpoczynają się natychmiast_</br>
 _- zmiany z planu miesięcznego na roczny plan profesjonalny są opłacane na koniec bieżącego okresu rozliczeniowego i również rozpoczynają się na koniec miesiąca_</br>
-_- po rezygnacji klienta płatności nie będą już realizowane_
-
-
-\_\_
-
-```sql
-
-```
-
-#### Proces:
-
-#### Wynik zapytania/Odpowiedź:
-
-
-
-
-
-
-
-</br></br></br></br></br></br></br></br>
-
-### 1.
-
-\_\_
-
-```sql
-
-```
-
-#### Proces:
-
-#### Wynik zapytania/Odpowiedź:
-
----
+_- po rezygnacji klienta płatności nie będą już realizowane_ -->

@@ -144,7 +144,7 @@ SELECT
 FROM runner_orders;
 ```
 
-## Rozwiązanie: A. Pizza Metrics
+## ⚙️ Rozwiązanie: A. Pizza Metrics
 
 ### 1. How many pizzas were ordered?
 
@@ -419,7 +419,7 @@ Funkcja TO_CHAR() jest funkcją, którą PostreSQL wykorzystuje do konwertowania
 
 ---
 
-## Rozwiązanie: B. Runner and Customer Experience
+## ⚙️ Rozwiązanie: B. Runner and Customer Experience
 
 ### 1. How many runners signed up for each 1 week period? (i.e. week starts 2021-01-01)
 
@@ -614,7 +614,7 @@ ORDER BY runner_id;
 
 ---
 
-## Rozwiązanie: C. Ingredient Optimisation
+## ⚙️ Rozwiązanie: C. Ingredient Optimisation
 
 ### 1. What are the standard ingredients for each pizza?
 
@@ -722,7 +722,7 @@ ORDER BY how_many_removed DESC
 
 ---
 
-## Rozwiązanie: D. Pricing and Ratings
+## ⚙️ Rozwiązanie: D. Pricing and Ratings
 
 ### 1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - how much money has Pizza Runner made so far if there are no delivery fees?
 
