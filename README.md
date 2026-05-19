@@ -21,5 +21,5 @@ Projekt skupia się na rozwiązywaniu realnych problemów biznesowych z użyciem
 - [Case Study #4 - Data Bank](https://github.com/kar-tix/8-Week-SQL-Challenge/tree/main/%234%20-%20Data%20Bank)
 - [Case Study #5 - Data Mart](https://github.com/kar-tix/8-Week-SQL-Challenge/tree/main/%235%20-%20Data%20Mart)
 - [Case Study #6 - Clique Bait](https://github.com/kar-tix/8-Week-SQL-Challenge/tree/main/%236%20-%20Clique%20Bait)
-- [Case Study #7 - Balanced Tree Clothing Co.]()
+- [Case Study #7 - Balanced Tree Clothing Co.](https://github.com/karolina-barylak/8-Week-SQL-Challenge/tree/main/%237%20-%20Balanced%20Tree%20Clothing%20Co)
 - [Case Study #8 - Fresh Segments]()
