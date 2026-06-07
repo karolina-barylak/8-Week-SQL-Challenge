@@ -15,7 +15,9 @@ Szczegółowe informacje dotyczące tego studium przypadku znajdują się [tutaj
 
 - [Opis](#-opis)
 - [Diagram relacji](#-diagram-relacji)
-- [Rozwiązanie: 2. Digital Analysis](#️-2-digital-analysis)
+- [Rozwiązanie: 1. High Level Sales Analysis](#️-1-high-level-sales-analysis)
+- [Rozwiązanie: 2. Transaction Analysis](#️-2-transaction-analysis)
+- [Rozwiązanie: 3. Product Analysis](#️-3-product-analysis)
 
 ## 🔍 Opis
 
